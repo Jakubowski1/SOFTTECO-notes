@@ -26,6 +26,12 @@ console.log(x + y + z);
 Uncaught ReferenceError: y is not defined
 ```
 
+### Brain teaser
+```js
+var x = 10;
+var y = '5';
+
+```
 #### typeof
 
 ```js
@@ -47,11 +53,12 @@ typeof undefined; // 'undefined'
 typeof function() {}; // "function"
 ```
 
-```
+
 
 Value is the value whose type we ought to determine.
 
 When provided with a non-existent variable, typeof returns the string 'undefined'. 
+
 
 ```js
 console.log(typeof x != 'undefined');
@@ -188,6 +195,18 @@ Simply when JavaScript automatically boxes, i.e. wraps, a primitive value into a
 4. `BigInt` for big integers
 5. `Symbol` for symbols
 
+#### Symbol
+
+```js
+const sym = Symbol("foo");
+typeof sym; // "symbol"
+const symObj = Object(sym);
+typeof symObj; // "object"
+```
+
+#### BigInt
+
+**`BigInt`** values represent numeric values which are too large to be represented by the `number` primitive.
 #### Get
 
 ```js
