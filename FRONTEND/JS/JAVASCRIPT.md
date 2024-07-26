@@ -2,11 +2,21 @@
 [[Data Structures]]
 [[Type Conversion]]
 [[Important Keywords]]
-[[Functions basics]]
+[[Arrow functions]]
 [[Time Complexities]]
 [[Expressions and operators]]
 [[Rest parameters]]
+[[Functions basics]]
+[[Time Complexities]]
+[[Expressions and operators]]
 [[Classes]]
-
+[[Loops]]
+[[Arrays]]
+[[Array methods]]
+[[Events]]
+[[Spread Syntax (...)]]
+[[Asynchronous JavaScript]]
+[[JavaScript Reducer]]
+[[Error handling]]
 
 

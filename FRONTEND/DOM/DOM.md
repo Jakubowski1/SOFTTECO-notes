@@ -1,8 +1,7 @@
-next  up [[Node interface]]
+[[Node interface]]
+[[Important Properties]]
+
 DOM is simply an object-based model of an HTML document.
-
-![[Pasted image 20240626124641.png]]
-
 
 #### HTML DOM classes
 
@@ -50,3 +49,37 @@ This is the easiest to show on the example I think. We want to change the name "
 </body>
 </html>
 ```
+
+#### The `innerHTML` & The `innerText`
+
+Technically, `innerHTML` is an accessor property with a getter and setter function.
+
+```js
+// First, select the element.
+var h1Element = document.getElementById('heading');
+
+// Next, change its content.
+h1Element.innerHTML = 'Hello, from JavaScript!';
+```
+
+**Text Content**: `innerText` retrieves or sets the text content of an element, including all text that is visible to the user.
+
+```js
+var element = document.getElementById('example');
+element.innerText = 'New text content'; // Sets plain text
+
+```
+
+Differences:
+
+| Feature             | `innerText`                               | `innerHTML`                                 |
+|---------------------|-------------------------------------------|---------------------------------------------|
+| **Content Type**    | Retrieves or sets the text content, excluding HTML tags | Retrieves or sets the HTML content, including HTML tags |
+| **CSS Influence**   | Influenced by CSS styles, such as `display: none` | Not influenced by CSS styles |
+| **Performance**     | May cause a reflow for accurate text representation | Does not cause a reflow |
+| **Use Cases**       | Use when working with plain text and concerned with visible content | Use when manipulating HTML content and working with tags |
+| **Example Output**  | `This is some text.`                       | `<p>This is <em>some</em> text.</p>`        |
+| **Setting Content** | `element.innerText = 'New text content';`  | `element.innerHTML = '<p>New <strong>HTML</strong> content</p>';` |
+
+
+

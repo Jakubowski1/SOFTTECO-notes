@@ -1,4 +1,6 @@
 
+## VAR kinda old fashioned variable
+
 ```js
 var variableName = value;
 ```

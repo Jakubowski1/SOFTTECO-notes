@@ -111,3 +111,22 @@ const bob2 = (a) => a + 100;
 
 ```
 
+Arrow functions implicitly return the expression right after `=>`, so you didn’t need a `return` statement:
+
+```js
+const listItems = chemists.map(person => 
+<li>...</li> 
+					// Implicit return!
+);
+```
+
+However, **you must write `return` explicitly if your `=>` is followed by a `{` curly brace!**
+
+```js
+const listItems = chemists.map(person => { 
+						// Curly brace  
+return <li>...</li>;
+});
+```
+
+Arrow functions containing `=> {` are said to have a block body. They let you write more than a single line of code, but you _have to_ write a `return` statement yourself. If you forget it, nothing gets returned!
